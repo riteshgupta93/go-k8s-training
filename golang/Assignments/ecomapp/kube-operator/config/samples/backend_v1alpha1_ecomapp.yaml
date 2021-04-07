@@ -1,0 +1,16 @@
+apiVersion: backend.ecom.app/v1alpha1
+kind: EcomApp
+metadata:
+  name: ecomapp-app
+spec:
+  # Default values copied from <project_dir>/helm-charts/ecomapp/values.yaml
+  global:
+    namespace: ecom
+  users:
+    image:
+      repository: riteshgupta/ecom-app
+      tag: "user-0.1"
+  orders:
+    image:
+      repository: riteshgupta/ecom-app
+      tag: "order-0.1"

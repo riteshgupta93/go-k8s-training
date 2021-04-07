@@ -1,0 +1,24 @@
+# permissions for end users to edit ecomapps.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: ecomapp-editor-role
+rules:
+- apiGroups:
+  - backend.ecom.app
+  resources:
+  - ecomapps
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - backend.ecom.app
+  resources:
+  - ecomapps/status
+  verbs:
+  - get

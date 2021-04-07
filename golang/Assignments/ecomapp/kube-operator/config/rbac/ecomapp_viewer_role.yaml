@@ -1,0 +1,20 @@
+# permissions for end users to view ecomapps.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: ecomapp-viewer-role
+rules:
+- apiGroups:
+  - backend.ecom.app
+  resources:
+  - ecomapps
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - backend.ecom.app
+  resources:
+  - ecomapps/status
+  verbs:
+  - get

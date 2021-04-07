@@ -1,0 +1,6 @@
+# Use the 'create api' subcommand to add watches to this file.
+- group: backend.ecom.app
+  version: v1alpha1
+  kind: EcomApp
+  chart: helm-charts/ecomapp
+#+kubebuilder:scaffold:watch
